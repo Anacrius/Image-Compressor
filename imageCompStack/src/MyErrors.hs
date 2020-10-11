@@ -19,10 +19,10 @@ data CustomError    = InvalidParams
                     | MiscError String
 
 instance Show CustomError where
-    show InvalidParams  = "USAGE: ./imageCompressor n e IN\n\n"
+    show InvalidParams  = "USAGE: ./imageCompressor n e IN v\n\n"
                         ++ "\tn\tnumber of colors in the final image\n"
                         ++ "\te\tconvergence limit\n"
-                        ++ "\tIN      path to the file containing the colors of the pixels"
+                        ++ "\tIN      path to the file containing the colors of the pixels\n"
                         ++ "\tv       turn visualizer on (1) or off (0)"
     show InvalidN       = "n parameter need to be an int from 1 to 255"
     show InvalidE       = "e parameter need to be a float value"
