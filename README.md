@@ -65,3 +65,7 @@ The visualizer feature was mainly for testing purposes so it was voluntarily cap
 - the output is basically a 20x20 empty characters with a black background then colorized with the output
 
 Please note that the clusters (i.e the newly assigned colors) are based on random values so you may end up with not-so-well disposed colors (for the 4pix example, you may get the 4 pixels under the same cluster which means that your final image will only render 1 color)
+
+## Contributors
+@Aubi0ne (cluster generation and pixel assignements)
+@Anacrius (file parsing, error handling and visualizer)
