@@ -1,0 +1,73 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3b8bfb37d939950d08c8c87bdadda3a4488b29b4d582241b28fb7862adfe04a5
+
+name:           imageCompStack
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Aubi0ne/imageCompStack#readme>
+homepage:       https://github.com/Aubi0ne/imageCompStack#readme
+bug-reports:    https://github.com/Aubi0ne/imageCompStack/issues
+author:         Benjamin FABRE
+maintainer:     benjamin.fabre@epitech.eu
+copyright:      2020 Benjamin FABRE
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Aubi0ne/imageCompStack
+
+library
+  exposed-modules:
+      Compressor
+      ImageParser
+      IsDigit
+      MyColors
+      MyData
+      MyErrors
+  other-modules:
+      Paths_imageCompStack
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , parallel
+    , random
+  default-language: Haskell2010
+
+executable imageCompStack-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_imageCompStack
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , imageCompStack
+    , parallel
+    , random
+  default-language: Haskell2010
+
+test-suite imageCompStack-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_imageCompStack
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , imageCompStack
+    , parallel
+    , random
+  default-language: Haskell2010
